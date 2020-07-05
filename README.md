@@ -1,5 +1,5 @@
-# MepReduce_MutiKeywordsSort  
-    ***基于hadoop平台的MapReduce程序，实现了多关键字排序功能，按第一个关键字对数据进行排序，当第一个关键字相同时，再按第二个关键字进一步排序***
+# MepReduce_MutiKeywordsSort
+基于hadoop平台的MapReduce程序，实现了多关键字排序功能，按第一个关键字对数据进行排序，当第一个关键字相同时，再按第二个关键字进一步排序
 ## 关键代码解释
  **此处指定类来格式化输入文件:**
   ```Java
