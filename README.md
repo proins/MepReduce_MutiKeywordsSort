@@ -1,13 +1,51 @@
 # MepReduce_MutiKeywordsSort
 ##关键代码解释
+ **此处指定类来格式化输入文件:**
   ```Java
   job.setInputFormatClass(TextInputFormat.class);
   ```
- **此处指定类来格式化输入文件**
+ **指定自定义的Mapper类:**
  ```Java
  job.setMapperClass(MyMapper.class); 
  ```
- **指定自定义的Mapper类**
+ **指定输出<k2,v2>的类型:**
+ ```Java
+job.setMapOutputKeyClass(newK2.class);  
+job.setMapOutputValueClass(LongWritable.class);
+ ```
+  **指定分区类:**
+ ```Java
+ job.setPartitionerClass(HashPartitioner.class);  
+ job.setNumReduceTasks(1); 
+ ```
+   **指定自定义的reduce类:**
+ ```Java
+job.setReducerClass(MyReducer.class); 
+ ```
+   **指定输出<k3,v3>的类型:**
+ ```Java
+job.setOutputKeyClass(LongWritable.class);  
+job.setOutputValueClass(LongWritable.class);
+ ```
+    **设定输出文件的格式化类:**
+ ```Java
+job.setOutputFormatClass(TextOutputFormat.class);
+ ```
+   **把代码提交给JobTracker执行:**
+ ```Java
+job.waitForCompletion(true); 
+ ```
+    **排序实现，按第一列从小到大排序；若第一列相同，按第二列从小到大排序：:**
+ ```Java
+public int compareTo(newK2 o) {  
+     long temp = this.first -o.first;  
+     if(temp!=0){  
+          return (int)temp;  
+          }  
+        return (int)(this.second -o.second);  
+     }  
+ ```
+
 
 ##完整代码
 ```Java
