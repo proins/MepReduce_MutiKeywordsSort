@@ -32,5 +32,5 @@ public class MultiSort {
         }  
         Job job = new Job(conf,MultiSort.class.getSimpleName());  
         FileInputFormat.setInputPaths(job, INPUT_PATH);  
-        job.setJarByClass(MultiSort.class);
-```java  
+        job.setJarByClass(MultiSort.class);```java
+ 
