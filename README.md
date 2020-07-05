@@ -33,9 +33,10 @@ public class MultiSort {
         Job job = new Job(conf,MultiSort.class.getSimpleName());  
         FileInputFormat.setInputPaths(job, INPUT_PATH);  
         job.setJarByClass(MultiSort.class);```
- ```Java
- job.setInputFormatClass(TextInputFormat.class);```
- 此处指定类来格式化输入文件  
+
+  ```Java
+  job.setInputFormatClass(TextInputFormat.class);```
+ **此处指定类来格式化输入文件**
  ```Java
  job.setMapperClass(MyMapper.class); ```
- 指定自定义的Mapper类
+ **指定自定义的Mapper类**
