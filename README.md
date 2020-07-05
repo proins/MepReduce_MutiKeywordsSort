@@ -1,5 +1,5 @@
 # MepReduce_MutiKeywordsSort
-##关键代码解释
+## 关键代码解释
  **此处指定类来格式化输入文件:**
   ```Java
   job.setInputFormatClass(TextInputFormat.class);
@@ -47,7 +47,7 @@ public int compareTo(newK2 o) {
  ```
 
 
-##完整代码
+## 完整代码
 ```Java
 import java.io.DataInput;  
 import java.io.DataOutput;  
